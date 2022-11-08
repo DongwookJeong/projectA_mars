@@ -2,6 +2,7 @@
   "name": "projecta_mars",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DongwookJeong/projectA_mars/issues"
   },
-  "homepage": "https://github.com/DongwookJeong/projectA_mars#readme"
+  "homepage": "https://github.com/DongwookJeong/projectA_mars#readme",
+  "dependencies": {
+    "module": "^1.2.5"
+  }
 }
