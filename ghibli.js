@@ -1,17 +1,26 @@
+import elementMk from "./elementMk.js";
+import addElem from "./addElem.js";
+
 const root = document.getElementById("root");
-const backgroundImg = document.createElement("div");
-const header = document.createElement("header")
+const header = document.createElement("header");
 const home = document.createElement("div")
 root.appendChild(header)
-root.appendChild(backgroundImg);
 header.appendChild(home)
 
-function styling(element, styleProps) {
-  for (const miya in styleProps) {
-    element.style[miya] = styleProps[miya];
+
+
+function styling(element, styleProps){
+  for(const miya in styleProps){
+    element.style[miya] = styleProps[miya]
   }
 }
+// const rootDoc = `${elementMk("div", addElem())}`;
+// const headerDoc = `${elementMk("header")}`;
 
+// const headerDoc = `${elementMk("header")}`;
+
+// root.innerHTML = rootDoc;
+// root.innerHTML = headerDoc;
 const rootStyle = {
   width: "100vw",
   height: "100vh",
@@ -25,14 +34,32 @@ const headerStyle = {
   width: "inherit",
   height: "5vh"
 }
-// ? 고정 이미지
 const homeStyle = {
   width: "45px",
   height: "inherit",
   backgroundImage: `URL("./images/homebu.png")`,
   backgroundSize: "cover",
 }
-// ! 랜덤 이미지
+styling(root, rootStyle);
+styling(header, headerStyle)
+styling(home, homeStyle)
+/*
+? 11월 9일자 배경이미지 삽입 및 css처리
+const root = document.getElementById("root");
+
+const backgroundImg = document.createElement("div");
+const header = document.createElement("header")
+const home = document.createElement("div")
+root.appendChild(header)
+root.appendChild(backgroundImg);
+header.appendChild(home)
+
+function styling(element, styleProps) {
+  for (const miya in styleProps) {
+    element.style[miya] = styleProps[miya];
+  }
+}
+! 랜덤 이미지
 const backStyle = {
   width: "inherit",
   height: "inherit",
@@ -40,11 +67,8 @@ const backStyle = {
   backgroundSize: "cover",
   margin: 0
 };
-styling(root, rootStyle);
-styling(header, headerStyle)
 styling(backgroundImg, backStyle);
-styling(home, homeStyle)
-
+*/
 /*
 ? 11월 8일자 api 시도, 이미지 넣기
 import apiJs from "./ghibliAPI.js";

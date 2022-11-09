@@ -7,10 +7,18 @@ const babyImgs = [
   "./images/page.png",
   "./images/page2.png",
   "./images/page3.png",
-]
+];
+export default function random() {
+  let selectImage = imgs[Math.floor(Math.random() * imgs.length)];
+  console.log(selectImage);
+  return selectImage;
+}
+
+random();
+
 /*
 ! 자 필요한 것들
-? 랜덤 함수
+? 랜덤
 ? if() ghibli.jpg일때 page.png
 ? 공통점 뒤 파일확장자, .n
 ? module 모아서 슝~
