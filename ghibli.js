@@ -7,14 +7,15 @@ const home = document.createElement("div")
 root.appendChild(header)
 header.appendChild(home)
 
-
+// const back = `${elementMk("div", addElem())}`
+// root.innerHTML = 
 
 function styling(element, styleProps){
   for(const miya in styleProps){
     element.style[miya] = styleProps[miya]
   }
 }
-// const rootDoc = `${elementMk("div", addElem())}`;
+
 // const headerDoc = `${elementMk("header")}`;
 
 // const headerDoc = `${elementMk("header")}`;
