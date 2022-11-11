@@ -1,16 +1,13 @@
-const imgs = [
-  "./images/ghibli.jpg",
-  "./images/ghibli2.jpg",
-  "./images/ghibli3.jpg",
-];
-let imgThing = imgs[Math.floor(Math.random() * 3)];
-function rrr(babyImg) {
-  return imgThing === "./images/ghibli.jpg"
-    ? (babyImg = "./images/page.png")
-    : imgThing === "./images/ghibli2.jpg"
-    ? (babyImg = "./images/page2.png")
-    : imgThing === "./images/ghibli3.jpg"
-    ? (babyImg = "./images/page3.png")
-    : console.error();
+const prac = Math.random(1, 10);
+console.log(prac);
+
+// function rrr(min, max) {
+//   return Math.random()*(max-min)+min;
+// }
+
+function ran(min, max){
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random()*(max-min + 1))+min
 }
-console.log(rrr());
+console.log(ran(1, 10));
