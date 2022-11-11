@@ -12,4 +12,3 @@ function ran(min, max){
 
 }
 console.log(ran(1, 10));
-
