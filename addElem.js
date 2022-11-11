@@ -1,4 +1,4 @@
-import elementMk from "./elementMk.js";
+// import elementMk from "./elementMk.js";
 // const babyImgs = [
   //   "./images/page.png",
   //   "./images/page2.png",
@@ -10,21 +10,29 @@ import elementMk from "./elementMk.js";
     "./images/ghibli3.jpg",
   ];
   let imgThing = imgs[Math.floor(Math.random() * 3)];
-  export default function moreElement(babyImg) {
-    if(imgThing === './images/ghibli.jpg'){
-    babyImg = "./images/page.png"
-    // return (imgThing,babyImg)
-  }else if(imgThing ==='./images/ghibli2.jpg'){
-    babyImg = "./images/page2.png"
-    // return (imgThing, babyImg)
-  }else if(imgThing ==='./images/ghibli3.jpg'){
-    babyImg = "./images/page3.png"
+  function moreElement(babyImg) {
+    return imgThing === "./images/ghibli.jpg"
+    ? (babyImg = "./images/page.png")
+    : imgThing === "./images/ghibli2.jpg"
+    ? (babyImg = "./images/page2.png")
+    : imgThing === "./images/ghibli3.jpg"
+    ? (babyImg = "./images/page3.png")
+    : console.error();
+  //   if(imgThing === './images/ghibli.jpg'){
+  //   babyImg = "./images/page.png"
+  //   // return (imgThing,babyImg)
+  // }else if(imgThing ==='./images/ghibli2.jpg'){
+  //   babyImg = "./images/page2.png"
+  //   // return (imgThing, babyImg)
+  // }else if(imgThing ==='./images/ghibli3.jpg'){
+  //   babyImg = "./images/page3.png"
     
-  }
-  return (babyImg)
+  // }
+  // return babyImg;
 }
-console.log(imgThing)
-console.log(moreElement())
+export {moreElement, imgThing}
+// console.log(imgThing)
+// console.log(moreElement())
 // const main = `${elementMk("div", imgThing)}`
 // const baby = `${elementMk("div", moreElement())}`
 // root.innerHTML(main)

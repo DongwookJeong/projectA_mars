@@ -1,18 +1,23 @@
-import elementMk from "./elementMk.js";
-import addElem from "./addElem.js";
-
+// import elementMk from "./elementMk.js";
+// import addElem from "./addElem.js";
+import { imgThing, moreElement } from "./addElem.js";
 const root = document.getElementById("root");
 const header = document.createElement("header");
-const home = document.createElement("div")
-root.appendChild(header)
-header.appendChild(home)
+const home = document.createElement("div");
+const backgroundImg = document.createElement("div");
+const babyImg = document.createElement("div");
+
+root.appendChild(header);
+header.appendChild(home);
+root.appendChild(backgroundImg);
+backgroundImg.appendChild(babyImg);
 
 // const back = `${elementMk("div", addElem())}`
-// root.innerHTML = 
+// root.innerHTML =
 
-function styling(element, styleProps){
-  for(const miya in styleProps){
-    element.style[miya] = styleProps[miya]
+function styling(element, styleProps) {
+  for (const miya in styleProps) {
+    element.style[miya] = styleProps[miya];
   }
 }
 
@@ -28,22 +33,41 @@ const rootStyle = {
   margin: 0,
   display: "flex",
   flexDirection: "column",
-  
 };
 const headerStyle = {
   position: "absolute",
   width: "inherit",
-  height: "5vh"
-}
+  height: "5vh",
+};
 const homeStyle = {
   width: "45px",
   height: "inherit",
   backgroundImage: `URL("./images/homebu.png")`,
   backgroundSize: "cover",
-}
+};
+const backStyle = {
+  width: "inherit",
+  height: "inherit",
+  backgroundImage: `url("${imgThing}")`,
+  backgroundSize: "cover",
+  margin: 0,
+};
+const babyStyle = {
+  width: "inherit",
+  height: "inherit",
+  backgroundImage: `url(${moreElement()})`,
+  backgroundSize: "cover",
+  margin: 0,
+  position: "absolute",
+  left: "-15px",
+  top: "-10px",
+};
 styling(root, rootStyle);
-styling(header, headerStyle)
-styling(home, homeStyle)
+styling(header, headerStyle);
+styling(home, homeStyle);
+styling(backgroundImg, backStyle);
+styling(babyImg, babyStyle);
+
 /*
 ? 11월 9일자 배경이미지 삽입 및 css처리
 const root = document.getElementById("root");
